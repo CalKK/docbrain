@@ -1,0 +1,22 @@
+{
+    "framework": "vite",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "functions": {
+        "api/upload.js": {
+            "maxDuration": 60,
+            "memory": 1024,
+            "includeFiles": "server/**"
+        }
+    },
+    "rewrites": [
+        {
+            "source": "/api/upload",
+            "destination": "/api/upload"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
